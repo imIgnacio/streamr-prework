@@ -9,12 +9,14 @@ function Card(props) {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
-            margin: '20px'
+            margin: '20px',
+            borderRadius: '20px',
+            boxShadow: '5px 10px 8px #888888',
         },
         img: {
             width: '100px',
             height: '100px',
-            marginBottom: '20px'
+            marginBottom: '12px'
         },
         h2: {
             margin: '0',
@@ -26,7 +28,7 @@ function Card(props) {
         }
     }
 
-    return <div style={styles.div}>
+    return <div style={styles.div} >
         <img style={styles.img} src={props.image} alt="Product" />
         <h2 style={styles.h2}>{props.name}</h2>
         <p style={styles.p}>{props.owner}</p>
