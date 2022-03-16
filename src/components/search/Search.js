@@ -15,13 +15,16 @@ function Search() {
         },
         searchBar: {
             margin: '4px',
+            borderRadius: '4px',
         },
         sortBar: {
             margin: '4px',
+            borderRadius: '4px',
             border: `${sortColor}`,
         },
         orderBar: {
             margin: '4px',
+            borderRadius: '4px',
             border: `${orderColor}`,
         }
     }

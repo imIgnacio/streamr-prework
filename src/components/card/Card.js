@@ -12,6 +12,7 @@ function Card(props) {
             margin: '20px',
             borderRadius: '20px',
             boxShadow: '5px 10px 8px #888888',
+            backgroundColor: '#41B3A3',
         },
         img: {
             width: '100px',
