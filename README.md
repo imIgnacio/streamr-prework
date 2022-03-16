@@ -11,6 +11,4 @@ To build this App I mainly used React, its components and hooks to make it work.
 
 You will need Node.js installed on your local machine.
 
-- Clone the repository to your local development environment.
-
-* git clone https://github.com/imIgnacio/streamr-prework
+- Clone the repository to your local development environment `git clone https://github.com/imIgnacio/streamr-prework`
