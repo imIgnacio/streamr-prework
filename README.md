@@ -7,6 +7,8 @@ a specific name or description, sort results by any tag accepted and even choose
 
 To build this App I mainly used React, its components and hooks to make it work. For fetching I used **Axios** module. In terms of styling, pure CSS was used.
 
+To see deployed application on GitHub pages go to the following link https://imignacio.github.io/streamr-prework/
+
 ## Installation
 
 You will need Node.js installed on your local machine.
