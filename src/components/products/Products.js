@@ -1,34 +1,30 @@
 import React from 'react';
 import Card from '../card/Card';
+import { queriesContext } from '../../App';
+
 const axios = require('axios');
 
 
-function Products() {
+function Products(props) {
 
   const [dataArray, setDataArray] = React.useState([]);
+  let {queries} = React.useContext(queriesContext);
 
   React.useEffect(() => {
     
-    axios.request({
-      "method": "get",
-      "url": "https://streamr.network/api/v1/products",
+    axios.get(`https://streamr.network/api/v1/products?publicAccess=true&max=50${queries}`, 
+    {
       "headers": {
         "Content-Type": "application/json",
         "authorization": ""
-      },
-      "params": {
-        "publicAccess": "true",
-        "max": "50",
       }
     })
     .then(response => { setDataArray(response.data) })
-    // .then(res => console.log(res))
-  },[])
+  },[props, queries])
   // Finish use Effect
 
   return <>
-    {/* {dataArray.map(product => <img src={product.imageUrl}/> )} */}
-    { dataArray.map(product => <Card image={product.imageUrl} name={product.name} owner={product.owner} />)}
+    { dataArray.map(product => <Card image={product.imageUrl} name={product.name} owner={product.owner} key={product.id}/>)}
   </>
 }
 
